@@ -1,0 +1,23 @@
+{
+  "name": "citations",
+  "productName": "Citations",
+  "version": "1.0.0",
+  "description": "Révision de citations de français",
+  "author": "Arthur Quersin",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "44.9.3",
+    "electron-builder": "26.17.0"
+  },
+  "build": {
+    "appId": "fr.citations.app",
+    "productName": "Citations",
+    "files": ["main.js", "index.html", "xlsx.full.min.js", "icon.png"],
+    "win": { "target": ["portable"], "icon": "icon.ico" },
+    "portable": { "artifactName": "Citations.exe" }
+  }
+}
